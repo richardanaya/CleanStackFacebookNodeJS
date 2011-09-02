@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}My Website{% endblock %}
+{% block content %}
+<div id="fb-root">
+    Game goes here
+</div>
+<script src="http://connect.facebook.net/en_US/all.js"></script>
+<script>
+  FB.init({
+    appId  : '215070195216901',
+    status : true, // check login status
+    cookie : true, // enable cookies to allow the server to access the session
+    xfbml  : true, // parse XFBML
+    channelUrl : 'http://blazing-flower-238.herokuapp.com/channel', // channel.html file
+    oauth  : true // enable OAuth 2.0
+  });
+</script>
+{% endblock %}
